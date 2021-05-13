@@ -1,13 +1,116 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600&display=swap');
+* {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
 body {
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
+  font-family: 'Open Sans', sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  color: #555;
+  font-size: 1rem;
+  line-height: 1.5;
 }
 
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
+}
+
+p {
+  margin: 0;
+  padding: 0;
+}
+
+/* container */
+.container,
+.container-fluid {
+  width: 100%;
+  padding-right: var(--mh-gutter-x, 0.75rem);
+  padding-left: var(--mh-gutter-x, 0.75rem);
+  margin-right: auto;
+  margin-left: auto;
+}
+
+@media (min-width: 576px) {
+  .container {
+    max-width: 540px;
+  }
+}
+
+@media (min-width: 768px) {
+  .container {
+    max-width: 720px;
+  }
+}
+
+@media (min-width: 992px) {
+  .container {
+    max-width: 960px;
+  }
+}
+
+@media (min-width: 1200px) {
+  .container {
+    max-width: 1140px;
+  }
+}
+
+@media (min-width: 1400px) {
+  .container {
+    max-width: 1320px;
+  }
+}
+
+/* row */
+.row {
+  --mh-gutter-x: 1.5rem;
+  --mh-gutter-y: 0;
+  display: flex;
+  flex-wrap: wrap;
+  margin-top: calc(var(--mh-gutter-y) * -1);
+  margin-right: calc(var(--mh-gutter-x) / -2);
+  margin-left: calc(var(--mh-gutter-x) / -2);
+}
+
+.row > * {
+  flex-shrink: 0;
+  width: 100%;
+  max-width: 100%;
+  padding-right: calc(var(--mh-gutter-x) / 2);
+  padding-left: calc(var(--mh-gutter-x) / 2);
+  margin-top: var(--mh-gutter-y);
+}
+
+/* col */
+.col {
+  flex: 1 0 0%;
+}
+@media (min-width: 992px) {
+  .col-6 {
+    flex: 0 0 auto;
+    width: 50%;
+  }
+}
+.py-100 {
+  padding: 100px 0;
+}
+
+.mx-auto {
+  margin: 0 auto;
+}
+
+.text-box {
+  box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+  padding: 30px;
+  border-radius: 4px;
+  margin-top: 40px;
+}
+
+.text-box h2 {
+  margin-top: 0;
+  color: #000;
 }
